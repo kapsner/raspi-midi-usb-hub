@@ -2,6 +2,8 @@
 
 Custom setup; original post is here: https://neuma.studio/raspberry-pi-as-usb-bluetooth-midi-host/
 
+Using an old Raspberry Pi Model B
+
 ## Preparations
 
 1. download https://downloads.raspberrypi.com/raspios_lite_armhf/images/raspios_lite_armhf-2024-03-13/2024-03-12-raspios-bookworm-armhf-lite.img.xz
@@ -34,4 +36,12 @@ network={
 touch /media/lorenz/bootfs/ssh
 ```
 
-5. install everything
+5. install everything: log via ssh into raspberry and execute the following commands
+
+```bash
+git clone https://github.com/kapsner/raspi-midi-usb-hub
+cd raspi-midi-usb-hub
+./install.sh
+```
+
+To manually update all MIDI-devices, run `./update.sh`
